@@ -24,13 +24,27 @@ We visualized distributions of:
 
 Each showed right-skewed distributions. Most recipes are short and require a small number of steps and ingredients.
 
+**Distribution of recipe durations:**
+![Univariate 1](images/univariate.png)
+
+**Distribution of number of ingredients:**
+![Univariate 2](images/univariate2.png)
+
 ## Bivariate Analysis
 
-We plotted scatterplots and heatmaps to observe correlation between numeric variables. Correlation with average rating was weak, but some linearity was observed with steps and ingredients.
+We plotted scatterplots to observe correlation between numeric variables. Correlation with average rating was weak, but some linearity was observed with steps and ingredients.
+
+**Rating vs. number of ingredients:**
+![Bivariate 1](images/bivariate1.png)
+
+**Rating vs. number of steps:**
+![Bivariate 2](images/bivariate2.png)
 
 ## Interesting Aggregates
 
 We grouped recipes by number of ingredients and visualized the average rating. This showed that recipes with very few or very many ingredients tended to receive lower ratings.
+
+![Grouped Table](images/grouped-table.png)
 
 ## Prediction Problem
 
@@ -51,6 +65,8 @@ We trained a simple Linear Regression model using:
 
 These features were used directly without transformation or encoding.
 
+![Initial Model](images/initial-model.png)
+
 **Baseline RMSE**: *1.0906*
 
 This gives us a reference to compare more complex models against.
@@ -67,6 +83,9 @@ We used a Random Forest Regressor with the following improvements:
 - `max_depth`: 10
 
 **Final Model RMSE**: *1.0966* (similar to baseline)
+
+**Feature importances (Final Model):**
+![Final Model Chart](images/final-chart.png)
 
 Despite feature engineering and tuning, the gain was marginal—possibly due to weak signal in the features.
 
