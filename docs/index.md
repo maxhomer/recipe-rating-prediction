@@ -9,7 +9,7 @@ We use the [Recipe Interactions Dataset](https://www.kaggle.com/datasets/kaggle/
 - `n_ingredients`: Number of ingredients used
 - `rating`: User rating for each recipe (0–5)
 
-We focus on predicting the **average rating** of each recipe based on structural attributes. The dataset contains approximately **N rows** after cleaning.
+We focus on predicting the **average rating** of each recipe based on structural attributes. The dataset contains approximately **83781 rows** after cleaning.
 
 ## Data Cleaning
 
@@ -89,6 +89,7 @@ We used a Random Forest Regressor with the following improvements:
 
 Despite feature engineering and tuning, the gain was marginal—possibly due to weak signal in the features.
 
-### Feature Importances:
+## Conclusion
 
+While our final model used additional feature engineering and tuning, it did not significantly outperform the simpler baseline. This suggests that recipe structure alone may not be highly predictive of user ratings. Additional features such as ingredient names or recipe descriptions might help improve prediction performance.
 
